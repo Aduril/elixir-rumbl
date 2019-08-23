@@ -3,7 +3,8 @@
 <table>
   <%= for user <- @users do %>
     <tr>
-      <%= render "user.html", user: user %>
+      <td><%= render "user.html", user: user %></td>
       <td><%= link "View", to: Routes.user_path(@conn, :show, user.id) %></td>
-  <%= end %>
+    </tr>
+  <% end %>
 </table>
